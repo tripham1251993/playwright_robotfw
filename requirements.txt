@@ -1,0 +1,6 @@
+robotframework
+robotframework-browser==17.1.0
+rpaframework==24.0.0
+pyyaml
+black
+flake8

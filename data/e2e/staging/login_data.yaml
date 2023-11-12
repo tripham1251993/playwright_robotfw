@@ -1,0 +1,15 @@
+C000001:
+  USERNAME: ""
+  PASSWORD: "invalid_password"
+
+C000002:
+  USERNAME: "invalid_username"
+  PASSWORD: ""
+
+C000003:
+  USERNAME: ""
+  PASSWORD: ""
+
+C000004:
+  USERNAME: "invalid_username"
+  PASSWORD: ""

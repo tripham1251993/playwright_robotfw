@@ -1,0 +1,21 @@
+INVALID_LOGIN_DATA:
+  C000001:
+    USERNAME: ""
+    PASSWORD: "invalid_password"
+
+  C000002:
+    USERNAME: "invalid_username"
+    PASSWORD: ""
+
+  C000003:
+    USERNAME: ""
+    PASSWORD: ""
+
+  C000004:
+    USERNAME: "invalid_username"
+    PASSWORD: "invalid_password"
+
+LOGIN_VALIDATION_MSG:
+  BLANK_USERNAME: Tên đăng nhập không được để trống
+  BLANK_PASSWORD: Mật khẩu không được để trống
+  SUMMARY_MESSAGE: Tên đăng nhâp hoặc mật khẩu không chính xác
