@@ -102,7 +102,9 @@ if install_req_libs:
     logger.info("Upgrade pip version", also_console=True)
     subprocess.run(f"{_python} -m pip install --upgrade pip", shell=True)
     logger.info("Install requirements", also_console=True)
-    subprocess.run(f"{_python} -m pip install -r requirements.txt", shell=True)
+    subprocess.run(f"{_python} -m pip install --upgrade -r requirements.txt", shell=True)
+    logger.info("Init playwright browsers", also_console=True)
+    subprocess.run("rfbrowser init", shell=True)
 
 
 def rerun_failed_test():

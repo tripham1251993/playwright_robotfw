@@ -52,3 +52,7 @@ python3 run.py \
 --headless \               # to let it run on headless mode or no headless (--no-headless to let it run without headless)
 --environment staging      # environment to run test on (staging , production)
 ```
+
+## view report:
+- To view report open `Report` folder and open the log.html file
+![example_report](docs/sample_report.PNG)

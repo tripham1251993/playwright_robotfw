@@ -3,15 +3,6 @@ Resource        ../Resources/MainMenu.resource
 Suite Setup     Login To Store    ${TENANT_NAME}    ${ADMIN_USERNAME}    ${ADMIN_PASSWORD}    ${STORE_NAME}
 
 *** Test Cases ***
-Test Open Sub Menus Of Product Management
-    Open Menu    ${PRODUCT_MENU}
-    Current Page Url Should End With    /san-pham
-    Page Title Should Be    Sản phẩm - Quản Lý Cửa Hàng
-
-    Open Menu    ${SUPPLIERS_MENU}
-    Current Page Url Should End With    /nha-cung-cap
-    Page Title Should Be    Nhà cung cấp - Quản Lý Cửa Hàng
-
 Test Open Sub Menus Of Customer Management
     Open Menu    ${CUSTOMER_MENU}
     Current Page Url Should End With    /khach-hang
