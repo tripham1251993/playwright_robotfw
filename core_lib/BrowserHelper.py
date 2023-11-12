@@ -1,10 +1,14 @@
 from robot.api.deco import keyword, library
 
+
 @library
 class BrowserHelper:
-
     @keyword
-    def update_device_config(self, device_config:dict, resolution:str = "1920x1080", ) -> dict:
+    def update_device_config(
+        self,
+        device_config: dict,
+        resolution: str = "1920x1080",
+    ) -> dict:
         width, height = resolution.split("x")
         width = int(width)
         height = int(height)
@@ -14,9 +18,9 @@ class BrowserHelper:
         }
         device_config["viewport"] = device_config.get("screen")
         return device_config
-        
+
     @keyword
-    def get_browser_context(self, resolution:str = "1920x1080", ignoredHTTPSErrors=False, jsEnabled=True) -> dict:
+    def get_browser_context(self, resolution: str = "1920x1080", ignoredHTTPSErrors=False, jsEnabled=True) -> dict:
         """Get Browser Context Options
 
         Args:

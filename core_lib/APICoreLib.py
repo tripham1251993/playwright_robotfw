@@ -16,7 +16,6 @@ except ImportError as imp_err:
 
 
 class APICoreLib:
-
     REQUEST_TIMEOUT_DEFAULT = 120
 
     def __init__(self):
@@ -29,9 +28,7 @@ class APICoreLib:
             "DELETE": self.session.delete,
         }
 
-    def send_request(
-        self, method, url, timeout=REQUEST_TIMEOUT_DEFAULT, **kwargs
-    ):
+    def send_request(self, method, url, timeout=REQUEST_TIMEOUT_DEFAULT, **kwargs):
         """
         :return: formated response which contains following keys:
             url, body, code, headers, time
@@ -46,6 +43,6 @@ class APICoreLib:
             "body": body,
             "code": resp.status_code,
             "headers": resp.headers,
-            "time": resp.elapsed.total_seconds()
+            "time": resp.elapsed.total_seconds(),
         }
         return formated_response

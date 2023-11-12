@@ -6,6 +6,7 @@ import operator
 dir_name = os.path.dirname(__file__).replace("core_lib", "")
 sys.path.append(dir_name)
 from core_lib.utilities import read_yaml
+
 api_data_files = []
 api_data_dir = os.path.join(dir_name, "data", "api")
 e2e_data_dir = os.path.join(dir_name, "data", "e2e")

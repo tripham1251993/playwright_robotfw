@@ -23,20 +23,23 @@ ap.add_argument(
     help="Choose which browser to run test. Available browsers: chromium, firefox, webkit",
 )
 
-ap.add_argument("-i", "--include", action="append")
-ap.add_argument("-e", "--exclude", action="append")
-ap.add_argument("-v", "--variable", action="append")
-ap.add_argument("-s", "--suite", type=str)
-ap.add_argument("-f", "--folder", default=f"TestSuite", type=str)
+ap.add_argument("-i", "--include", action="append", help="Include test tag")
+ap.add_argument("-e", "--exclude", action="append", help="Exclude test tag")
+ap.add_argument("-v", "--variable", action="append", help="Set Input Variable to use accross tests")
+ap.add_argument("-s", "--suite", type=str, help="run test on Suite filename without .robot")
+ap.add_argument("-f", "--folder", default=f"TestSuite", type=str, help="TestSuite folder name")
 ap.add_argument(
-    "-r", "--rerun-failed", default=False, action=argparse.BooleanOptionalAction, help="Re-run failed or not"
+    "-r", "--rerun-failed", default=False, action=argparse.BooleanOptionalAction, help="Set re-run failed test cases"
 )
 ap.add_argument("-L", "--loglevel", default="INFO", help="Set debug level: TRACE, DEBUG, INFO")
 ap.add_argument("--environment", default="staging", type=str, help="running on environment staging/production")
 ap.add_argument("--consolecolors", default="ansi", help="console color")
-ap.add_argument("-d", "--report-directory", default="Report", help="Set Report Directory")
+ap.add_argument("-d", "--report-directory", default="Report", help="Set Robotframework Report Directory")
 ap.add_argument(
-    "--rerun-failed-only", default=False, action=argparse.BooleanOptionalAction, help="Only rerun failed tests"
+    "--rerun-failed-only",
+    default=False,
+    action=argparse.BooleanOptionalAction,
+    help="Config this will let you re-run only failed tests on output.xml file",
 )
 ap.add_argument("--debug", default=False, action=argparse.BooleanOptionalAction, help="Pause on failure for debugging")
 ap.add_argument("--resolution", default="1920x1080", help="Set screen resolution, default: 1920x1080")
